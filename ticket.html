@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-color: #66FF99;
+        }
+
+        .class-contain div:not(#form-produit, #form-client, #mod, #tva-recu, #tete) {
+            border: 1px solid black;
+            width: 100%;
+            height: 180px;
+        }
+
+        .class-contain {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 400px;
+            top: 80px;
+        }
+
+        #form {
+            height: 450px;
+        }
+
+        #caisse {
+            background-color: black;
+            font-size: 30px;
+            text-align: center;
+            color: white;
+            height: 16px;
+            width: 100%;
+        }
+
+        #form {
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+            height: 90%;
+            flex-direction: row;
+        }
+
+        #form2 {
+            border-left: 5px solid black;
+        }
+
+        fieldset {
+            padding: 25px;
+        }
+
+        #mon-div {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            width: 100%;
+            background-color: pink;
+        }
+
+        #field {
+            width: 100%;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        #tva-recu {
+            float: right;
+            right: 20px;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: gray;
+        }
+
+        #mod {
+            display: flex;
+            position: absolute;
+            flex-direction: column;
+        }
+
+        .tete {
+            background-color: gray;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caisse</title>
+</head>
+
+<body>
+    <form action="" method="post">
+        <div class="class-contain">
+            <div class="tete">
+                <div><button>Initialisation</button></div>
+            </div>
+            <div id="form">
+                <div id=" form1">
+                    <fieldset>
+                        <legend>Information client</legend>
+                        <div id="form-client">
+                            <span>Assure :</span>
+                            <input type="radio">OUI <input type="radio">Non <br>
+                            <span>No Assure :</span> <input type="text" name="num_ass"><br>
+                            <span>Beneficiaire : </span> <input type="text" name="benef"><br>
+                            <span>Assurance : </span><input type="text" name="Assurance"><br>
+                            <span>Couverture : </span> <input type="text" name="couv">
+                        </div>
+                    </fieldset>
+                </div>
+                <div id="form2">
+                    <fieldset>
+                        <legend> Information produit </legend>
+                        <div id="form-produit">
+                            <span>Assure :</span>
+                            <span>type : </span> <input type="text" name="type"><br>
+                            <span>Prix unitaire : </span> <input type="text" name="prix"><br>
+                            <span>Quantite : </span><input type="text" name="quantite"><br>
+                            <span>Remise : </span> <input type="text" name="Remise">
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div id="mon-div">
+                <fieldset id="field">
+                    <legend>REGLEMENT</legend>
+                    <div id="mod">
+                        <span>TVA : </span> <select name="mon-tva" id="">
+                            <option value="">xxxxxxxxxxx</option>
+                            <option value="">yyyyyyyyyyy</option>
+                            <option value="">zzzzzzzzzzz</option>
+                        </select>
+                        <span>Montant Verse : </span> <input type="text" name="montant-verse">
+                    </div>
+                    <div id="tva-recu">
+                        <span>Mode de paiement : </span> <select name="monsel" id="">
+                            <option value="">xxxxxxxxxxx</option>
+                            <option value="">yyyyyyyyyyy</option>
+                            <option value="">zzzzzzzzzzz</option>
+                        </select>
+                        <span>Monnaie reçu :</span> <input type="text" name="monnaie">
+                    </div>
+                </fieldset>
+            </div>
+            <div id="caisse">CAISSE : 1050020 F CFA</div>
+        </div>
+    </form>
+</body>
+
+</html>
