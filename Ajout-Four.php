@@ -88,7 +88,7 @@
             span {
                 position: absolute;
                 width: 100%;
-                color: white;
+
             }
 
             .champ input:not(#btn1, #btn2) {
@@ -110,7 +110,7 @@
                 position: absolute;
                 width: 100%;
                 font-size: 10px;
-                color: white;
+
                 left: 0;
                 font-family: monospace;
             }

@@ -18,12 +18,13 @@
 
         .myclass {
             border: 2px solid rgb(3, 121, 39);
-            /*background-color: rgb(170, 157, 157);*/
+            background-color: rgb(170, 157, 157);
 
             /* proposition de couleurs */
             /*background-color: #B0C0BC;*/
-            background-color: #96BE8C;
+            /* background-color: #96BE8C;
             /*background-color: #009900;*/
+
 
 
             min-width: 30%;
@@ -67,7 +68,7 @@
             position: absolute;
             left: 35px;
             font-size: 12px;
-            color: white;
+            color: black;
             font-family: monospace;
         }
 
@@ -90,13 +91,6 @@
 
         @media screen and (max-width:1300px) {
 
-            /* span {
-                position: absolute;
-                width: 100%;
-                font-size: 10px;
-                color: white;
-                left: auto;
-            }*/
             .champ input:not(#btn1, #btn2) {
                 position: absolute;
                 left: 200px;
@@ -115,7 +109,7 @@
                 height: 380px;
                 position: relative;
                 top: 70px;
-                background-color: #009900;
+
             }
         }
 
@@ -123,10 +117,8 @@
             span {
                 position: absolute;
                 width: 100%;
-                font-size: 12px;
-                color: white;
                 left: auto;
-                font-family: monospace;
+
             }
 
             .champ input:not(#btn1, #btn2) {
@@ -145,10 +137,9 @@
             .myclass {
                 border: 2px solid green;
                 width: 80%;
-                height: 380px;
-                position: relative;
-                top: 70px;
-                background-color: #009900;
+
+
+
             }
         }
 
@@ -156,10 +147,7 @@
             span {
                 position: absolute;
                 width: 100%;
-                font-size: 12px;
-                color: white;
                 left: auto;
-                font-family: monospace;
             }
 
             .champ input:not(#btn1, #btn2) {
@@ -178,10 +166,8 @@
             .myclass {
                 border: 1px solid black;
                 width: 80%;
-                height: 380px;
-                position: relative;
-                top: 70px;
-                background-color: #009900;
+
+
             }
         }
 
@@ -189,10 +175,7 @@
             .myclass {
                 border: 1px solid black;
                 width: 80%;
-                height: 380px;
-                position: relative;
-                top: 70px;
-                background-color: #009900;
+
             }
 
             .champ input:not(#btn1, #btn2) {
