@@ -22,6 +22,11 @@
             font-family: monospace;
         }
 
+        table tr:hover {
+            height: 28px;
+
+        }
+
         table tr {
             height: 30px;
 

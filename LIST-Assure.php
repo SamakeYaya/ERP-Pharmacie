@@ -12,6 +12,11 @@
             align-items: center;*/
         }
 
+        table tr:hover {
+            height: 28px;
+
+        }
+
         table {
             width: 100%;
             background-color: white;

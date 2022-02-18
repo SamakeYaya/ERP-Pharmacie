@@ -18,12 +18,19 @@
 
         .myclass {
             border: 2px solid rgb(3, 121, 39);
-            background-color: rgb(170, 157, 157);
+            /*background-color: rgb(170, 157, 157);*/
+
+            /* proposition de couleurs */
+            /*background-color: #B0C0BC;*/
+            background-color: #96BE8C;
+            /*background-color: #009900;*/
+
+
             min-width: 30%;
             height: 380px;
             position: relative;
             top: 70px;
-            /* background-color: #009900;*/
+
         }
 
         #tete {
@@ -60,7 +67,7 @@
             position: absolute;
             left: 35px;
             font-size: 12px;
-            color: black;
+            color: white;
             font-family: monospace;
         }
 

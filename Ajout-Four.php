@@ -23,19 +23,25 @@
             height: 400px;
             position: relative;
             top: 70px;
-            background-color: #009900;
+            /*background-color: #009900;*/
+            /* background-color: #797270;*/
+            background-color: #96BE8C;
         }
 
         #tete {
             box-sizing: border-box;
             width: 100%;
-            background-color: rgb(172, 153, 130);
+            font-family: monospace;
+            /*background-color: rgb(170, 157, 157);*/
+            background-color: #009900;
+            /*background-color: white;*/
             padding: 8px;
             top: 30px;
             overflow: hidden;
             font-size: 15px;
             text-align: center;
             text-transform: uppercase;
+            color: white;
         }
 
         .champ {
@@ -56,7 +62,7 @@
             position: absolute;
             left: 30px;
             font-size: 12px;
-            color: white;
+            color: black;
             font-family: monospace;
         }
 
