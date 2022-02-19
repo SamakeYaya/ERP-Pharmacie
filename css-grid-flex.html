@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        ::before,
+        ::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: monospace;
+            font-size: 15px;
+        }
+
+        .container-grille {
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 100px 1fr 100px;
+            grid-template-rows: auto 1fr auto;
+        }
+
+        header {
+            grid-column: span 3;
+            padding: 30px;
+            text-align: center;
+            font-size: 20px;
+            background-color: rgb(111, 179, 184);
+            color: white;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #098f1b;
+        }
+
+        li a {
+            display: block;
+            margin: 50px;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .liste-slidanav {
+            list-style-type: none;
+            max-height: 650px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        aside {
+            padding: 20px;
+            background-color: pink;
+            color: white;
+            font-size: 22px;
+        }
+
+        aside p {
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer {
+            grid-column: span 3;
+            padding: 20px;
+            text-align: center;
+            background-color: gray;
+            color: white;
+            font-size: 20px;
+        }
+
+        @media screen and (max-width:1000px) {
+            body {
+                font-size: 12px;
+            }
+
+            .container-grille {
+                display: flex;
+                flex-direction: column;
+            }
+
+            li a {
+                display: inline-block;
+                margin: 12px;
+            }
+
+            aside p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+            }
+
+            main {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-grille">
+        <header> Bog lorem</header>
+        <nav>
+            <ul class="liste-slidanav">
+                <li><a href="#">lorem</a>
+                    <a href="#">lorem</a>
+                    <a href="#">lorem</a>
+                    <a href="#">lorem</a>
+                    <a href="#">lorem</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h1> comtenu principal</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam dolorum ea mollitia, quis, laboriosam
+                maxime eos quae quam in assumenda ullam perferendis suscipit doloribus nemo dicta illum ad voluptatum
+                est repudiandae labore. Ad, aspernatur quos molestias reiciendis voluptas voluptatibus ducimus modi ea?
+                In, deserunt laudantium? Perferendis, facilis. Temporibus ex accusantium incidunt voluptas optio, iusto,
+                tempora aut repudiandae similique dignissimos, sunt amet quos. Pariatur ducimus officiis tempore unde
+                deserunt dolorum aut consequuntur eligendi voluptas architecto optio ipsam similique nobis in ullam
+                quidem, odit facere? Totam est qui, voluptatum repellat facere sit aliquid ab quod quasi cum nobis a
+                sint corporis fugiat ad iusto aliquam earum odit, quo temporibus labore. Vero dignissimos, maxime
+                quisquam temporibus, ut voluptatibus totam quod cumque quibusdam recusandae repellat perferendis
+                deserunt nisi voluptatem error laboriosam ipsam magnam ducimus ad aperiam? Cum natus labore, corrupti
+                necessitatibus numquam dolor quidem, alias eaque, a laudantium unde ea eius fugiat fugit repellendus
+                consequuntur sapiente commodi minima! Ex maiores delectus ea voluptatum neque atque doloribus dolorem
+                quia at facere, sit repudiandae nulla. Neque quis saepe, doloremque ducimus labore cum magni dolorum
+                asperiores odio veritatis quia porro harum accusamus alias dicta quibusdam repellat nisi. Velit omnis
+                nostrum eveniet? Consequuntur, quibusdam voluptatum! Nobis, culpa libero nemo quidem sint totam
+                blanditiis dolor a debitis labore, quo adipisci voluptatibus vitae ipsam, cupiditate nisi! Velit odit
+                ipsam autem qui adipisci perspiciatis officia accusantium quia doloribus? Quas, suscipit dolorum quos
+                explicabo consequuntur optio at sint laborum vel veritatis aut esse delectus voluptatibus eveniet
+                quibusdam vero temporibus aperiam beatae minus totam officia incidunt debitis. Corrupti, optio itaque
+                voluptas reprehenderit esse sit minima consectetur magni eveniet saepe sequi, accusantium cumque eos,
+                earum maiores ratione aut quaerat. Enim mollitia laboriosam ducimus veniam earum animi fugiat, molestiae
+                harum optio aliquid ullam deleniti unde exercitationem quaerat error aperiam quis reprehenderit
+                molestias autem. Soluta, dolorum.</p>
+        </main>
+        <aside>
+            <p> audit auto </p>
+        </aside>
+        <footer> Footer tout droit reserve </footer>
+    </div>
+</body>
+
+</html>
