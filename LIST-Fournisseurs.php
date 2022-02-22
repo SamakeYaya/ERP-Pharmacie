@@ -5,11 +5,13 @@
     <style>
         body {
             background-color: #66FF99;
-            /* padding: 0;
+            padding: 0;
             margin: 0;
-             display: flex;
+            font-family: monospace;
+            /* display: flex;
             justify-content: center;
             align-items: center;*/
+
         }
 
         table {
@@ -20,29 +22,51 @@
             border: 1px solid #009900;
             font-size: 12px;
             font-family: monospace;
+            border: 2px solid green;
         }
 
-        table tr:hover {
+        th {
+            border: 1px solid black;
+            width: 5%;
+            right: 5%;
+            height: 5%;
+        }
+
+        table th {
+            background-color: #cccccc;
+            font-weight: bolder;
+        }
+
+
+        /* table tr:hover {
             height: 28px;
 
-        }
+        }*/
 
         table tr {
             height: 30px;
 
         }
 
+        table tr:not(#tete):hover {
+            background-color: #003300;
+            color: white;
+
+        }
+
         table th {
-            background-color: #dFdBdB;
+            background-color: #cccccc;
             font-weight: bolder;
         }
 
-        button:hover {
+        tr:nth-child(even) {
             background-color: #009900;
             color: white;
         }
 
-        tr:nth-child(even) {
+        #id1 input:hover,
+        #idright input:hover,
+        #id2 input:hover {
             background-color: #009900;
             color: white;
         }
@@ -52,10 +76,10 @@
             justify-content: space-between;
             align-items: stretch;
             flex-direction: column;
-            width: 90%;
+            width: 64%;
             position: relative;
             top: 100px;
-            margin: 60px;
+            margin-left: 250px;
 
 
         }
@@ -112,16 +136,16 @@
         <div class="class">
             <div class="class2">
                 <div id="id1">
-                    <button>Précedent</button>
-                    <button>Suivant</button>
+                    <input type="button" value="Précedent" name="">
+                    <input type="button" value="Suivant" name="">
                 </div>
                 <div id="idright">
-                    <button>Ajouter un Fournisseur</button>
+                    <input type="button" value="Ajouter un nouvel assuré" name="">
                 </div>
             </div>
             <table>
                 <thead>
-                    <tr>
+                    <tr id="tete">
                         <th>Date</th>
                         <th>ID</th>
                         <th>ID Employé</th>
@@ -155,11 +179,11 @@
             </table>
             <div class="class3">
                 <div id="id2">
-                    <button>Précedent</button>
-                    <button>Suivant</button>
+                    <input type="button" value="Précedent" name="">
+                    <input type="button" value="Suivant" name="">
                 </div>
                 <div id="idright">
-                    <button>Supprimer</button>
+                    <input type="button" value="Supprimer">
                 </div>
             </div>
         </div>

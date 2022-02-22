@@ -4,7 +4,7 @@
 <head>
     <style>
         body {
-            background-color: #66FF99;
+            background-color: #6fa781;
         }
 
         form {
@@ -18,17 +18,11 @@
 
         .myclass {
             border: 2px solid rgb(3, 121, 39);
-            background-color: rgb(170, 157, 157);
-
-            /* proposition de couleurs */
-            /*background-color: #B0C0BC;*/
-            /* background-color: #96BE8C;
-            /*background-color: #009900;*/
-
-
-
+            /* background-color: rgb(170, 157, 157);*/
+            /* background-color: #7C7C7C;*/
+            background-color: #92977E;
             min-width: 30%;
-            height: 380px;
+            height: 350px;
             position: relative;
             top: 70px;
 
@@ -64,7 +58,7 @@
             margin: 10px;
         }
 
-        span {
+        label {
             position: absolute;
             left: 35px;
             font-size: 12px;
@@ -80,7 +74,7 @@
 
         #btn {
             position: absolute;
-            bottom: 40px;
+            bottom: 10px;
             left: 130px;
         }
 
@@ -97,12 +91,6 @@
                 width: 400%;
             }
 
-            /* #btn {
-                position: absolute;
-                bottom: 22px;
-                bottom: 30px;
-                left: 80px;
-            }*/
             .myclass {
                 border: 1px solid black;
                 width: 40%;
@@ -114,7 +102,7 @@
         }
 
         @media screen and (max-width:960px) {
-            span {
+            label {
                 position: absolute;
                 width: 100%;
                 left: auto;
@@ -144,7 +132,7 @@
         }
 
         @media screen and (max-width:850px) {
-            span {
+            label {
                 position: absolute;
                 width: 100%;
                 left: auto;
@@ -190,6 +178,7 @@
                 bottom: 30px;
                 left: 80px;
             }
+
         }
     </style>
     <meta charset="UTF-8">
@@ -203,12 +192,12 @@
         <div class="myclass">
             <div id="tete">Ajouter un Employé </div>
             <div class="champ">
-                <div class="class"> <span>Date:</span> <input type="date" name="date"></div>
-                <div class="class"><span>N°d'identification:</span><input type="text" name="num"></div>
-                <div class="class"><span>Id_emloyé:</span><input type="text" name="employe-id"></div>
-                <div class="class"><span>Id_Fournisseur:</span><input type="text" name="four-id"></div>
-                <div class="class"><span>Nom:</span><input type="text" name="nom"></div>
-                <div class="class"><span>Prenom(s):</span><input type="text" name="prenom"></div>
+                <div class="class"> <label for="dt">Date:</label> <input type="date" name="date" id="dt"></div>
+                <div class="class"><label for="num-id">N°d'identification:</label><input type="text" name="num" id="num-id"></div>
+                <div class="class"><label for="nm">Nom:</label><input type="text" name="nom" id="nm"></div>
+                <div class="class"><label for="pnm">Prenom(s):</label><input type="text" name="prenom" id="pnm"></div>
+                <div class="class"><label for="idemp">Id_emloyé:</label><input type="text" name="employe-id" id="idemp"></div>
+                <div class="class"><label for="idfour">Id_Fournisseur:</label><input type="text" name="four-id" id="idfour"></div>
             </div>
             <div id="btn"><input type="submit" value="Ajouter" name="add-btn" id="btn1"> <input type="reset" value="Annuler" name="add-btn" id="btn2"></div>
         </div>
