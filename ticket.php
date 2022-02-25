@@ -14,7 +14,11 @@
         }
 
         body {
-            background-color: #4E937A;
+            background-color: #66FF99;
+        }
+
+        form {
+            background-color: #66FF99;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -26,9 +30,11 @@
         }
 
         legend {
-            background-color: #dddd;
+            background-color: rgb(13, 121, 45);
+            color: white;
             font-size: 12px;
             text-transform: uppercase;
+            border: 3px solid green;
         }
 
         li a {
@@ -38,7 +44,7 @@
         }
 
         .container {
-            height: 85vh;
+            height: 78vh;
             width: 65%;
             display: flex;
             flex-direction: column;
@@ -49,8 +55,9 @@
             /*margin-right: 70px;
             /* background-color: rgb(111, 179, 184);*/
             /* background-color: rgb(111, 179, 184);*/
-            background-color: #849483;
+            background-color: #70AE6E;
             border-radius: 10px;
+            border: 3px solid green;
         }
 
         main {
@@ -63,6 +70,7 @@
             height: 40vh;
             top: 0px;
             margin: -10px;
+
         }
 
         .recherche {
@@ -84,13 +92,17 @@
             padding: 10px;
             text-align: center;
             font-size: 20px;
-            background-color: rgb(0, 0, 0);
+            background-color: rgb(13, 121, 45);
             color: white;
-            /* position: absolute;*/
+            /*position: absolute;*/
             bottom: -30px;
             width: 100%;
-            margin-left: 18px;
+            margin-left: 20px;
             box-sizing: border-box;
+        }
+
+        footer input {
+            background-color: rgb(13, 121, 45);
         }
 
         .section2,
@@ -111,16 +123,23 @@
             /*padding: 50px;*/
         }
 
+        /* .section2 {
+            border: 2px solid black;
+            width: 100%;
+
+        }*/
+
         .fiel2 {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            margin: 20px;
+            margin: 3px;
             width: 100%;
             padding: 12px;
-            border-color: green;
-            position: relative;
+            border: none;
+            /* border-color: green;*/
+
         }
 
         #mod,
@@ -146,8 +165,9 @@
             width: 100%;
             border-radius: 10px 0px 0px 10px;
             position: relative;
-            border-color: green;
-            border-right: none;
+            border: none;
+            /* border-color: green;
+            border-right: none;*/
         }
 
         .monfield2 {
@@ -160,7 +180,8 @@
             border-radius: 0px 10px 10px 0px;
             padding: 24.7px;
             width: 100%;
-            border-left: none;
+            border: none;
+            /* border-left: none;*/
             position: relative;
         }
 
@@ -195,6 +216,7 @@
             left: 120px;
         }
 
+
         /* .monfield2 label {
             position: absolute;
             left: 10px;
@@ -203,15 +225,25 @@
             top: 0;
             text-align: center;
             background-color: rgb(13, 121, 45);
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+            color: white;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .ticket input {
+            background-color: rgb(13, 121, 45);
+            color: white;
+            font-size: 15px;
+            padding: 5;
+            border: none;
+            text-align: center;
         }
 
         .btn {
             text-align: center;
             position: absolute;
             bottom: 0;
-            margin-left: 30%;
+            margin-left: 35%;
         }
 
         .btn input {
@@ -297,75 +329,115 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="ticket">
-            <h1>TICKET No:<input type="text" readonly size="4px"
-                    style="padding: 6px; font-size: 16px; border: none; text-align: center;" value="5">
-            </h1>
-        </div>
-        <div class="recherche">
-            <input type="button" value="INITIALISATION" id="init">
-            <select name="" id="slt" style="width: 250px;">
-                <option value="">xxxxxxxxxxxxxx</option>
-                <option value="">xxxxxxxxxxxxxx</option>
-            </select>
-        </div>
-        <main>
-            <section class="section1">
-                <div class="form1">
-                    <fieldset class="monfield1">
-                        <legend>Information client</legend>
-                        <div id="radio">
-                            <label for="as">Assuré:</label>
-                            <div id="rd"><input type="radio" name="sex" id="rd1">OUI <input type="radio" name="sex"
-                                    id="rd2">Non</div>
+    <form action="ticket.php" method="post">
+        <?php
+        $host = 'localhost';
+        $dbname = 'mabase';
+        $username = 'root';
+        $password = '';
+
+        $dsn = "mysql:host=$host;dbname=$dbname";
+        // récupérer tous les Fournisseurs
+        $sql = "SELECT type FROM produit";
+
+        try {
+            $pdo = new PDO($dsn, $username, $password);
+            $stmt = $pdo->query($sql);
+            if ($stmt === false) {
+                die("Erreur");
+            }
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+
+
+        ?>
+        <script type="text/javascript">
+            function update() {
+                var select = document.getElementById('slt');
+                var option = select.options[select.selectedIndex];
+
+                document.getElementById('ty').value = option.value;
+                /* document.getElementById('pu').value = option.text;*/
+
+            }
+            update();
+        </script>
+
+        <div class="container">
+            <div class="ticket">
+                <h2>TICKET No:<input type="text" readonly size="4px" value="5">
+                </h2>
+            </div>
+            <div class="recherche">
+                <input type="button" value="INITIALISATION" id="init">
+
+                <select name="selectio" id="slt" style="width: 250px;" onchange="update()">
+                    <?php while ($row = $stmt->fetch()) : ?>
+                        <option><?php echo htmlspecialchars($row['type']); ?></option>
+                    <?php endwhile; ?>
+                </select>
+            </div>
+            <main>
+                <section class="section1">
+                    <div class="form1">
+                        <fieldset class="monfield1">
+                            <legend>Information client</legend>
+                            <div id="radio">
+                                <label for="as">Assuré:</label>
+                                <div id="rd"><input type="radio" name="sex" id="rd1">OUI <input type="radio" name="sex" id="rd2">Non</div>
+                            </div>
+                            <div> <label for="n-as">No Assuré:</label> <input type="text" name="num_ass" id="n-as">
+                            </div>
+                            <div><label for="ben">Beneficiaire:</label><input type="text" name="benef" id="ben"></div>
+                            <div><label for="asce">Assurance:</label>
+                                <input type="text" name="Assurance" id="asce">
+                            </div>
+                            <div><label for="couv">Couverture:</label>
+                                <input type="text" name="couv" id="couv">
+                            </div>
+
+                        </fieldset>
+                    </div>
+                    <div class="form2">
+                        <fieldset class="monfield2">
+                            <legend> Information produit
+                            </legend>
+
+                            <div><label for="ty">Type:</label><input type="text" name="type" id="ty" value=""></div>
+                            <div><label for="pu">Prix unitaire:</label><input type="text" name="prix" id="pu" value=""></div>
+                            <div><label for="qte">Quantité:</label><input type="text" name="quantite" id="qte"></div>
+                            <div><label for="rem">Remise:</label><input type="text" name="Remise" id="rem"></div>
+
+                        </fieldset>
+                    </div>
+                </section>
+                <section class="section2">
+                    <fieldset class="fiel2">
+                        <legend>REGLEMENT</legend>
+                        <div id="mod">
+                            <label for="mdp">Mode de paiement : </label> <select name="monsel" id="mdp">
+                                <option value="">xxxxxxxxxxx</option>
+                                <option value="">zzzzzzzzzzz</option>
+                            </select>
+                            <label for="tva">TVA : </label> <select name="mon-tva" id="tva">
+                                <option value="">xxxxxxxxxxx</option>
+                                <option value="">zzzzzzzzzzz</option>
+                            </select>
                         </div>
-                        <div> <label for="n-as">No Assuré:</label> <input type="text" name="num_ass" id="n-as"></div>
-                        <div><label for="ben">Beneficiaire:</label><input type="text" name="benef" id="ben"></div>
-                        <div><label for="asce">Assurance:</label>
-                            <input type="text" name="Assurance" id="asce">
-                        </div>
-                        <div><label for="couv">Couverture:</label>
-                            <input type="text" name="couv" id="couv">
+                        <div id="tva-recu">
+                            <label for="mv">Montant Versé : </label> <input type="text" name="montant-verse" id="mv">
+                            <label for="mr">Monnaie reçu :</label> <input type="text" name="monnaie" id="mr">
                         </div>
                     </fieldset>
-                </div>
-                <div class="form2">
-                    <fieldset class="monfield2">
-                        <legend> Information produit </legend>
-                        <div><label for="ty">Type:</label><input type="text" name="type" id="ty"></div>
-                        <div><label for="pu">Prix unitaire:</label><input type="text" name="prix" id="pu"></div>
-                        <div><label for="qte">Quantité:</label><input type="text" name="quantite" id="qte"></div>
-                        <div><label for="rem">Remise:</label><input type="text" name="Remise" id="rem"></div>
-                    </fieldset>
-                </div>
-            </section>
-            <section class="section2">
-                <fieldset class="fiel2">
-                    <legend>REGLEMENT</legend>
-                    <div id="mod">
-                        <label for="mdp">Mode de paiement : </label> <select name="monsel" id="mdp">
-                            <option value="">xxxxxxxxxxx</option>
-                            <option value="">zzzzzzzzzzz</option>
-                        </select>
-                        <label for="tva">TVA : </label> <select name="mon-tva" id="tva">
-                            <option value="">xxxxxxxxxxx</option>
-                            <option value="">zzzzzzzzzzz</option>
-                        </select>
-                    </div>
-                    <div id="tva-recu">
-                        <label for="mv">Montant Versé : </label> <input type="text" name="montant-verse" id="mv">
-                        <label for="mr">Monnaie reçu :</label> <input type="text" name="monnaie" id="mr">
-                    </div>
-                </fieldset>
-            </section>
-            <footer> CAISSE : <input type="text" value="10 000 000 F CFA" readonly
-                    style="font-size: 18px; background-color: black;color: white;border: none;"></footer>
-        </main>
-        <div class="btn">
-            <input type="button" value="AJOUTER"> <input type="button" value="RECAPITULATIF">
+                </section>
+                <footer> CAISSE : <input type="text" value="10 000 000 F CFA" readonly style="font-size: 18px; color: white;border: none;"></footer>
+            </main>
+            <div class="btn">
+                <input type="button" value="AJOUTER"> <input type="button" value="RECAPITULATIF">
+            </div>
         </div>
-    </div>
+    </form>
 </body>
 
 </html>

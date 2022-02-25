@@ -4,7 +4,7 @@
 <head>
     <style>
         body {
-            background-color: #6fa781;
+            background-color: #66FF99;
         }
 
 
@@ -23,7 +23,7 @@
             height: 350px;
             position: relative;
             top: 70px;
-            /* background-color: #7C7C7C;*/
+            /*display: ;background-color: #7C7C7C;*/
             background-color: #92977E;
             /*background-color: rgb(170, 157, 157);*/
         }
