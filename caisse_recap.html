@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="lib/css/styl.css"/>
+        <link rel="stylesheet" href="lib/css/print.css" media="print">
+        <style>
+            button{
+                width: 10%;
+                height: 8%;
+                background-color: #009900;
+                color: #FFFFFF;
+            }
+        </style>
+    </head>
+
+    <body id="body">
+
+        <button onclick="imprimer()" id="impression">IMPRIMER</button>
+
+        <div class="containt1">
+            <label for="">Ticket N° :</label><input type="text"><br>
+            <label for="">Date :</label><input type="text"><br>
+            <label for="">N° Assuré :</label><input type="text"><br>
+            <label for="">Assurance :</label><input type="text">
+        </div><br>
+
+        <div class="table">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Identification</th>
+                        <th>Description</th>
+                        <th>Prix unitaire</th>
+                        <th>Quantité</th>
+                        <th>Remise</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                    </tr>
+            
+                    <tr>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                    </tr>
+            
+                    <tr>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                    </tr>
+            
+                    <tr>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                        <td data-label=""></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><br>
+
+        <div class="containt2">
+            <label for="">Total HT :</label><input type="text"><br>
+            <label for="">TVA :</label><input type="text"><br>
+            <label for="">Total TTC :</label><input type="text"><br>
+            <label for="">Montant réglé :</label><input type="text"><br>
+            <label for="">Montant rendu :</label><input type="text">
+        </div>
+       
+    </body>
+    
+    <script>
+        function imprimer() {
+            window.print()
+        }
+    </script>
+
+</html>

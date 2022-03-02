@@ -1,0 +1,96 @@
+/* RESET GENERAL */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}*
+
+body{
+    background-color: #66FF99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* On donne une hauteur de 100% de l'écran, les éléments d'alignent au centre de la page grâce aux propriétés FLEXBOX */
+    height: 60vh; 
+    font-family: "monospace";
+    margin:0;
+    padding:5%;
+}
+
+#globale{
+    border: 1px solid #009900;
+    background: #66FF99;
+    position: relative;
+    top: 60px;
+}
+
+#menu{
+    border: 1px solid #009900;
+    background: #66FF99;
+    height: 90px;
+    margin: 5px;
+    padding: 5px;
+}
+
+#contenu{
+    border: 1px solid #009900;
+    background: #66FF99;
+    min-height: 200px;
+    margin: 5px;
+    padding: 5px;
+}
+
+#client{
+    border: none;
+    background: #66FF99;
+    min-height: 150px;
+    width: 45%;
+    float: left;
+}
+
+#produit{
+    border: none;
+    background: #66FF99;
+    min-height: 150px;
+    width: 45%;
+    float: right;
+    overflow: auto;
+}
+
+#reglement{
+    border: none;
+    background: #66FF99;
+    height: 90px;
+    margin: 5px;
+    padding: 5px;
+}
+
+#caisse{
+    border: 1px solid #009900;
+    background: #000000;
+    color: white;
+    height: 90px;
+    margin: 5px;
+    padding: 5px;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+    font-size: 50PX;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+label{
+    padding: 10px;
+    padding-top: 10px;
+}
+
+.info_client{
+    text-align: right;
+    font-size: 20px;
+    position: relative;
+    left: -32%;
+    padding: 10px;
+}

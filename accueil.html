@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page de garde</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <link href="lib/css/styl.css" type="text/css" rel="stylesheet">
+        <script src="main.js"></script>
+    </head>
+    <body>
+        
+        <div class="pro-table">
+            <div class="col-4 text-center">
+                <a href="#" class="bouton" onclick="Click()">
+                    <img src="img/IMG_6370.PNG" height="70" width="70" alt="img" style="align-content: left;">
+                    &nbsp; Produits
+                </a>
+            </div>
+            <div class="col-4 text-center">
+                <a href="#" class="bouton" onclick="Click()">
+                    <img src="img/IMG_6351.png" height="70" width="70" alt="img" style="align-content: left;">
+                    &nbsp; Facture
+                </a>
+            </div>
+            <div class="col-4 text-center">
+                <a href="#" class="bouton" onclick="Click()">
+                    <img src="img/caisse.jpg" height="70" width="70" alt="img" style="align-content: left;">
+                    &nbsp;&nbsp;&nbsp; Caisse
+                </a>
+            </div>
+            <div class="col-4 text-center">
+                <a href="#" class="bouton" onclick="Click()">
+                    <img src="img/IMG_6324.PNG" height="70" width="70" alt="img" style="align-content: left;">
+                    &nbsp; Assurés
+                </a>
+            </div> 
+        </div>  
+        
+    </body>
+
+    <script>
+        function Click(){
+            var audio = new Audio();
+            audio.src = "beeps/Song PHARMACIEL.mp3";
+            audio.play();
+        }
+    </script>
+</html>

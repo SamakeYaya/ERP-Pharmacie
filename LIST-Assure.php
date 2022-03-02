@@ -75,8 +75,9 @@
             flex-direction: column;
             width: 64%;
             position: relative;
-            top: -100px;
-            margin: 230px;
+            top: 100px;
+            margin-left: 250px;
+
 
         }
 
@@ -98,6 +99,21 @@
             align-items: center;
             position: absolute;
             bottom: -40px;
+        }
+
+        tbody,
+        thead {
+            display: block;
+        }
+
+        tbody {
+            height: 350px;
+            overflow-y: scroll;
+        }
+
+        th,
+        td {
+            width: 10em;
         }
     </style>
     <meta charset="UTF-8">

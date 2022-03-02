@@ -35,6 +35,11 @@
             font-size: 12px;
             text-transform: uppercase;
             border: 3px solid green;
+            text-align: center;
+        }
+
+        .fiel2 legend {
+            width: 100%;
         }
 
         li a {
@@ -45,7 +50,7 @@
 
         .container {
             height: 78vh;
-            width: 65%;
+            width: 64%;
             display: flex;
             flex-direction: column;
             position: relative;
@@ -338,8 +343,7 @@
 
         $dsn = "mysql:host=$host;dbname=$dbname";
         // récupérer tous les Fournisseurs
-        $sql = "SELECT type FROM produit";
-
+        $sql = "SELECT * FROM produit";
         try {
             $pdo = new PDO($dsn, $username, $password);
             $stmt = $pdo->query($sql);
@@ -357,9 +361,8 @@
                 var select = document.getElementById('slt');
                 var option = select.options[select.selectedIndex];
 
-                document.getElementById('ty').value = option.value;
-                /* document.getElementById('pu').value = option.text;*/
-
+                document.getElementById('ty').value = option.text;
+                document.getElementById('pu').value = option.value;
             }
             update();
         </script>
@@ -373,8 +376,9 @@
                 <input type="button" value="INITIALISATION" id="init">
 
                 <select name="selectio" id="slt" style="width: 250px;" onchange="update()">
+                    <option value="rien" selected>Selectionnez un produit</option>
                     <?php while ($row = $stmt->fetch()) : ?>
-                        <option><?php echo htmlspecialchars($row['type']); ?></option>
+                        <option value="<?php echo htmlspecialchars($row['pu']); ?>"><?php echo htmlspecialchars($row['type']); ?></option>
                     <?php endwhile; ?>
                 </select>
             </div>
@@ -434,7 +438,7 @@
                 <footer> CAISSE : <input type="text" value="10 000 000 F CFA" readonly style="font-size: 18px; color: white;border: none;"></footer>
             </main>
             <div class="btn">
-                <input type="button" value="AJOUTER"> <input type="button" value="RECAPITULATIF">
+                <input type="button" value="Valider"> <input type="button" value="RECAPITULATIF">
             </div>
         </div>
     </form>

@@ -1,0 +1,57 @@
+body{
+    font-family: monospace;
+}
+/*CONNEXION*/
+#login{
+    border-radius:  10px 10px 10px 10px;
+    background-color: white; 
+    font-family: monospace;
+    opacity: 1;
+    border: rgb(184, 183, 183) solid;
+    box-shadow: black;
+
+}
+
+#login:hover{
+    opacity: 1;
+}
+
+.header_login{
+    text-align: center; 
+    background-color: #66FF99;
+}
+
+.btnConnexion{
+    background-color: #66FF99; 
+    border-radius: 5px 5px 5px 5px;
+}
+.btnConnexion:hover{
+    background-color: #009900; 
+}
+
+
+/*ACCEUIL*/
+
+#bodyacceuil{
+    background-color: #66FF99;
+}
+.conteneurMenu{
+    background-color: rgb(184, 183, 183);     
+    border: 1px solid black;
+    width: 100%;
+}
+
+.conteneurMenu:hover{
+    border: 2px solid lime;
+    background-color: #009900;
+}
+
+.divMenu{
+    text-align: center;
+}
+
+.libMenu{
+    font-family:monospace;
+    color:black;
+    
+}

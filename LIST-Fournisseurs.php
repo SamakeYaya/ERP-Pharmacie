@@ -38,10 +38,6 @@
         }
 
 
-        /* table tr:hover {
-            height: 28px;
-
-        }*/
 
         table tr {
             height: 30px;
@@ -102,6 +98,21 @@
             align-items: center;
             position: absolute;
             bottom: -40px;
+        }
+
+        tbody,
+        thead {
+            display: block;
+        }
+
+        tbody {
+            height: 350px;
+            overflow-y: scroll;
+        }
+
+        th,
+        td {
+            width: 10em;
         }
     </style>
     <meta charset="UTF-8">

@@ -1,0 +1,207 @@
+/* RESET GENERAL */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+            
+body{
+    background-color: #66FF99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* On donne une hauteur de 100% de l'écran, les éléments d'alignent au centre de la page grâce aux propriétés FLEXBOX */
+    height: 100vh; 
+    font-family: "monospace";
+    text-align: center;
+    margin:0;
+    padding:5%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+/* Style  du bouton levé :*/
+.bouton:link,
+.bouton:visited{
+    /* Utile pour positionner l'ombre qui plus tard donnera l'impression de 3D : */
+    position: relative;
+    /* Décoration du bouton : */
+    font-size: 30px;
+    text-decoration: none;
+    color: #000000;
+    background-color: rgb(204, 204, 204);
+    padding: 10px;
+    margin-left: 35px;
+    margin-right: -35px;
+    /*border-left: 1px solid lighten;*/
+    border: 1px solid rgb(216, 214, 214);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    /* Ombre qui donne l'impression de 3D : */
+    box-shadow: 0px 8px 0px #028002, 0px 10px 5px #888;
+    cursor: pointer;
+}
+
+/* Création de l'effet : au clic, le bouton descend. Il faut donc le déplacer vers le bas ET REDUIRE L'OMBRE */
+.bouton:active{
+    top: 4px;
+    background-color: #009900;
+    box-shadow: 0px 2px 0px #028002;
+    color:  #FFFFFF;
+    /*text-shadow: 0 1px 1px #009900;*/
+    box-shadow: 0px 2px 0px #028002, 0px 3px 5px #888;
+}
+
+0
+
+a:active{
+    top: 4px;
+    background-color: #009900;
+    box-shadow: 0px 2px 0px #028002;
+    color:  #000000;
+    box-shadow: 0px 2px 0px #028002, 0px 3px 5px #888;
+}
+
+.pro-table {
+    float: left;
+    width: 80%;
+    height: 70%;
+    background-color: #d4dfcf;
+    /*box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.3);
+    /*box-shadow: 10px 10px 20px #bbb;*/
+    padding: 0px;
+    border: 1px solid #028002;
+    border-color: #028002;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.2),
+                10px 10px 10px rgba(0, 0, 0, 0.2),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+                inset 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.col-4{
+    width: 40%;
+    margin: 1%;
+    padding-top: 1%;
+    padding-bottom: 4%;
+    padding-left: 5%;
+    float: left;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+   text-align: left;
+}
+
+/*Caisse Recap*/
+
+/*body{
+	margin:0;
+	padding:5%;
+	font-family: monospace;
+}*/
+
+*{
+	box-sizing: border-box;
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000;
+}
+
+.table td,.table th{
+padding:12px 15px;
+border:1px solid #ddd;
+background: linear-gradient();
+text-align: center;
+font-size:16px;
+}
+
+.table th{
+    background-color: #dfdbdb;
+    color:#000000;
+}
+
+.table tbody tr:nth-child(odd){
+    background-color: #009900;
+    color:#FFFFFF;
+}
+
+.table tbody tr:nth-child(even){
+    background-color: #FFFFFF;
+    color:#000000;
+}
+/*responsive*/
+
+@media(max-width: 500px){
+    .table thead{
+        display: none;
+    }
+
+    .table, .table tbody, .table tr, .table td{
+        display: block;
+        width: 100%;
+    }
+    .table tr{
+        margin-bottom:15px;
+    }
+    .table td{
+        text-align: right;
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+    .table td::before{
+        content: attr(data-label);
+        position: absolute;
+        left:0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+label{
+    padding: 10px;
+    padding-top: 10px;
+}
+
+.containt{
+    position: relative;
+}
+
+.containt1{
+    text-align: right;
+    font-size: 20px;
+    position: relative;
+    left: -32%;
+    padding: 10px;
+}
+
+.containt2{
+    text-align: right;
+    font-size: 20px;
+    position: relative;
+    right: -29%;
+    padding: 10px;
+}
