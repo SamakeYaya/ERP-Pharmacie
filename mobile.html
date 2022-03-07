@@ -7,12 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* style pour centrer le formulaire*/
         form {
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* style sur le contener pour mettre tous ses enfants directs en colonne et autres*/
         .container {
             display: flex;
             flex-direction: column;
@@ -24,6 +26,7 @@
             background-color: #f1f1f1;
         }
 
+        /* style sur le titre du contener*/
         #entete {
             background-color: green;
             padding: 20px;
@@ -32,12 +35,14 @@
             color: white;
         }
 
+        /*style pour diviser le formulaire en deux colonnes avec css grid*/
         .formulaire {
             display: grid;
             grid-template-columns: 100px 1fr;
             width: 100%;
         }
 
+        /*style visant tous les div contenus dans mon formulaire*/
         .formulaire div {
             border: none;
             border-left: 1px solid rgb(46, 44, 44);
@@ -45,10 +50,12 @@
             background-color: rgb(114, 182, 114);
         }
 
+        /* style sur les etoiles devant les labels*/
         span {
             color: red;
         }
 
+        /*style sur mon boutton valider*/
         #btn {
             width: 100%;
             /* position: absolute;
@@ -66,6 +73,7 @@
             border-top: 1px solid rgb(49, 48, 48);
         }
 
+        /*style visant tous les champs et labels de mon formulaire*/
         label,
         input {
             margin: 13px;
