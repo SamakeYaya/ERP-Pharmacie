@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            margin-top: 40px;
+            border: 2px solid black;
+            position: relative;
+            height: auto;
+            background-color: #f1f1f1;
+        }
+
+        #entete {
+            background-color: green;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        .formulaire {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            width: 100%;
+        }
+
+        .formulaire div {
+            border: none;
+            border-left: 1px solid rgb(46, 44, 44);
+            border-bottom: 1px solid rgb(44, 43, 43);
+            background-color: rgb(114, 182, 114);
+        }
+
+        span {
+            color: red;
+        }
+
+        #btn {
+            width: 100%;
+            /* position: absolute;
+            bottom: 0px;*/
+        }
+
+        #btn button {
+            padding: 15px;
+            display: grid;
+            grid-column: span 2;
+            width: 100%;
+            border: none;
+            color: black;
+            font-weight: lighter;
+            border-top: 1px solid rgb(49, 48, 48);
+        }
+
+        label,
+        input {
+            margin: 12px;
+            padding: 7px;
+            font-size: 12px;
+            font-family: monospace;
+        }
+
+        input {
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="post" onsubmit=" return false">
+        <div class="container">
+            <div id="entete"> INVENTAIRE </div>
+            <div class="formulaire">
+                <label for="cbar">Code barre <span>*</span>:</label>
+                <div><input type="text" name="cbar" id="cbar"></div>
+                <label for="qtent">Qte entre<span>*</span>:</label>
+                <div><input type="text" name="qtent" id="qtent"></div>
+                <label for="qtsort">Qte sortie<span>*</span>:</label>
+                <div><input type="text" name="qtsort" id="qtsort"></div>
+                <label for="stocksecu">Stock securite<span>*</span>:</label>
+                <div><input type="text" name="stocksecu" id="stocksecu"></div>
+                <label for="stockmax">Stock maximum<span>*</span>:</label>
+                <div> <input type="text" name="stockmax" id="stockmax"></div>
+                <label for="stockmin">Stock minimum<span>*</span>:</label>
+                <div><input type="text" name="stockmin" id="stockmin"></div>
+                <label for="remarque">Remarque<span>*</span>:</label>
+                <div><input type="text" name="remarque" id="remarque"></div>
+            </div>
+            <div id="btn"><button>VALIDER</button></div>
+        </div>
+    </form>
+</body>
+
+</html>
